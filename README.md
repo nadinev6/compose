@@ -1,8 +1,8 @@
-# 🚀 Compose with Tambo
+# Compose with Tambo
 
 <div align="center">
 
-![Compose with Tambo](https://img.shields.io/badge/Compose%20with-Tambo%20AI-FF6B6B?style=for-the-badge&logo=artificial-intelligence&logoColor=white)
+![Tambo AI](https://img.shields.io/badge/Tambo%20AI-v0.57.0-00D4AA?style=for-the-badge&logo=artificial-intelligence&logoColor=white)
 ![Next.js](https://img.shields.io/badge/Next.js-15.4.1-000000?style=for-the-badge&logo=next.js&logoColor=white)
 ![React](https://img.shields.io/badge/React-19.1.0-61DAFB?style=for-the-badge&logo=react&logoColor=black)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.0-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
@@ -151,12 +151,15 @@ Simply describe what you need in natural language:
 ## 🏗️ Architecture
 
 ### Tech Stack
-- **Frontend**: Next.js 15.4.1 + React 19.1.0
-- **Language**: TypeScript 5.0
-- **AI Integration**: Tambo AI SDK
-- **Styling**: Tailwind CSS v4
-- **Code Editor**: Monaco Editor
-- **Validation**: Zod schemas
+- **Frontend**: Next.js 14.2.15 + React 18.3.1
+- **Language**: TypeScript 5.6.3
+- **AI Integration**: 
+  - `@tambo-ai/react` v0.57.0
+  - `@tambo-ai/typescript-sdk` v0.74.0
+- **Styling**: Tailwind CSS v3.4.14
+- **Code Editor**: Monaco Editor v4.6.0
+- **Email Service**: Mailgun API
+- **Validation**: Zod v3.23.8
 
 ### Key Components
 - **InteractableEditor** - AI-controllable code editor with `withInteractable` wrapper
@@ -233,9 +236,9 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 📞 Support
 
-- 📧 **Email**: support@yourdomain.com
+- 📧 **Email**: support@otokia.cloud
 - 💬 **Discord**: [Join our community](#)
-- 🐛 **Issues**: [GitHub Issues](https://github.com/yourusername/ai-email-builder/issues)
+- 🐛 **Issues**: [GitHub Issues](https://github.com/nadinev6/compose/issues)
 - 📖 **Docs**: [Documentation](#)
 
 ---
