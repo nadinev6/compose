@@ -1,0 +1,383 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: oklch(98.809% 0.00011 271.152);
+  --foreground: oklch(0.16 0.04 281.83);
+  --card: oklch(1.00 0 0);
+  --card-foreground: oklch(0.16 0.04 281.83);
+  --popover: oklch(1.00 0 0);
+  --popover-foreground: oklch(0.16 0.04 281.83);
+  --primary: oklch(0.67 0.29 341.42);
+  --primary-foreground: oklch(1.00 0 0);
+  --secondary: oklch(0.96 0.02 286.08);
+  --secondary-foreground: oklch(0.16 0.04 281.83);
+  --muted: oklch(0.96 0.02 286.08);
+  --muted-foreground: oklch(0.16 0.04 281.83);
+  --accent: oklch(0.89 0.17 171.26);
+  --accent-foreground: oklch(0.16 0.04 281.83);
+  --destructive: oklch(0.65 0.23 34.04);
+  --border: oklch(0.92 0.01 224.97);
+  --input: oklch(0.92 0.01 224.97);
+  --ring: oklch(0.67 0.29 341.42);
+  --chart-1: oklch(0.67 0.29 341.42);
+  --chart-2: oklch(0.55 0.29 299.10);
+  --chart-3: oklch(0.84 0.15 209.27);
+  --chart-4: oklch(0.89 0.17 171.26);
+  --chart-5: oklch(0.92 0.19 101.40);
+  --sidebar: oklch(0.96 0.02 286.08);
+  --sidebar-foreground: oklch(0.16 0.04 281.83);
+  --sidebar-primary: oklch(0.67 0.29 341.42);
+  --sidebar-primary-foreground: oklch(1.00 0 0);
+  --sidebar-accent: oklch(0.89 0.17 171.26);
+  --sidebar-accent-foreground: oklch(0.16 0.04 281.83);
+  --sidebar-border: oklch(0.92 0.01 224.97);
+  --sidebar-ring: oklch(0.67 0.29 341.42);
+
+  --font-sans: Outfit, sans-serif;
+  --font-serif: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+  --font-mono: Fira Code, monospace;
+
+  --radius: 0.5rem;
+
+  --shadow-2xs: 0 1px 3px 0px oklch(0.00 0 0 / 0.05);
+  --shadow-xs: 0 1px 3px 0px oklch(0.00 0 0 / 0.05);
+  --shadow-sm: 0 1px 3px 0px oklch(0.00 0 0 / 0.10), 0 1px 2px -1px oklch(0.00 0 0 / 0.10);
+  --shadow: 0 1px 3px 0px oklch(0.00 0 0 / 0.10), 0 1px 2px -1px oklch(0.00 0 0 / 0.10);
+  --shadow-md: 0 1px 3px 0px oklch(0.00 0 0 / 0.10), 0 2px 4px -1px oklch(0.00 0 0 / 0.10);
+  --shadow-lg: 0 1px 3px 0px oklch(0.00 0 0 / 0.10), 0 4px 6px -1px oklch(0.00 0 0 / 0.10);
+  --shadow-xl: 0 1px 3px 0px oklch(0.00 0 0 / 0.10), 0 8px 10px -1px oklch(0.00 0 0 / 0.10);
+  --shadow-2xl: 0 1px 3px 0px oklch(0.00 0 0 / 0.25);
+
+  --spacing: 0.25rem;
+}
+
+.dark {
+  --background: oklch(0.16 0.04 281.83);
+  --foreground: oklch(0.95 0.01 260.77);
+  --card: oklch(0.25 0.06 281.15);
+  --card-foreground: oklch(0.95 0.01 260.77);
+  --popover: oklch(0.25 0.06 281.15);
+  --popover-foreground: oklch(0.95 0.01 260.77);
+  --primary: oklch(0.67 0.29 341.42);
+  --primary-foreground: oklch(1.00 0 0);
+  --secondary: oklch(0.25 0.06 281.15);
+  --secondary-foreground: oklch(0.95 0.01 260.77);
+  --muted: oklch(0.25 0.06 281.15);
+  --muted-foreground: oklch(0.62 0.05 278.12);
+  --accent: oklch(0.89 0.17 171.26);
+  --accent-foreground: oklch(0.16 0.04 281.83);
+  --destructive: oklch(0.65 0.23 34.04);
+  --border: oklch(0.33 0.08 280.79);
+  --input: oklch(0.33 0.08 280.79);
+  --ring: oklch(0.67 0.29 341.42);
+  --chart-1: oklch(0.67 0.29 341.42);
+  --chart-2: oklch(0.55 0.29 299.10);
+  --chart-3: oklch(0.84 0.15 209.27);
+  --chart-4: oklch(0.89 0.17 171.26);
+  --chart-5: oklch(0.92 0.19 101.40);
+  --sidebar: oklch(0.16 0.04 281.83);
+  --sidebar-foreground: oklch(0.95 0.01 260.77);
+  --sidebar-primary: oklch(0.67 0.29 341.42);
+  --sidebar-primary-foreground: oklch(1.00 0 0);
+  --sidebar-accent: oklch(0.89 0.17 171.26);
+  --sidebar-accent-foreground: oklch(0.16 0.04 281.83);
+  --sidebar-border: oklch(0.33 0.08 280.79);
+  --sidebar-ring: oklch(0.67 0.29 341.42);
+
+  --shadow-2xs: 0 1px 3px 0px oklch(0.00 0 0 / 0.05);
+  --shadow-xs: 0 1px 3px 0px oklch(0.00 0 0 / 0.05);
+  --shadow-sm: 0 1px 3px 0px oklch(0.00 0 0 / 0.10), 0 1px 2px -1px oklch(0.00 0 0 / 0.10);
+  --shadow: 0 1px 3px 0px oklch(0.00 0 0 / 0.10), 0 1px 2px -1px oklch(0.00 0 0 / 0.10);
+  --shadow-md: 0 1px 3px 0px oklch(0.00 0 0 / 0.10), 0 2px 4px -1px oklch(0.00 0 0 / 0.10);
+  --shadow-lg: 0 1px 3px 0px oklch(0.00 0 0 / 0.10), 0 4px 6px -1px oklch(0.00 0 0 / 0.10);
+  --shadow-xl: 0 1px 3px 0px oklch(0.00 0 0 / 0.10), 0 8px 10px -1px oklch(0.00 0 0 / 0.10);
+  --shadow-2xl: 0 1px 3px 0px oklch(0.00 0 0 / 0.25);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+
+  --font-sans: var(--font-sans);
+  --font-mono: var(--font-mono);
+  --font-serif: var(--font-serif);
+
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+
+  --shadow-2xs: var(--shadow-2xs);
+  --shadow-xs: var(--shadow-xs);
+  --shadow-sm: var(--shadow-sm);
+  --shadow: var(--shadow);
+  --shadow-md: var(--shadow-md);
+  --shadow-lg: var(--shadow-lg);
+  --shadow-xl: var(--shadow-xl);
+  --shadow-2xl: var(--shadow-2xl);
+}
+
+
+/* ============================================
+   Global Styles
+   ============================================ */
+
+html {
+  color-scheme: light;
+}
+
+html.dark {
+  color-scheme: dark;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+}
+
+/* ============================================
+   Utility Class Overrides
+   ============================================ */
+
+.border-flat {
+  border-color: var(--border);
+}
+
+.bg-container {
+  background-color: var(--card);
+}
+
+.bg-backdrop {
+  background-color: var(--muted);
+}
+
+.bg-muted {
+  background-color: var(--secondary);
+}
+
+.text-muted-foreground {
+  color: var(--muted-foreground);
+}
+
+.text-foreground {
+  color: var(--foreground);
+}
+
+.text-destructive {
+  color: var(--destructive);
+}
+
+.bg-popover {
+  background-color: var(--popover);
+}
+
+.bg-background {
+  background-color: var(--background);
+}
+
+.border-border {
+  border-color: var(--border);
+}
+
+/* ============================================
+   Message Bubble Styling
+   Target the actual Tambo MessageContent bubbles
+   ============================================ */
+
+/* User message bubbles - accent color background */
+[data-message-role="user"] [data-slot="message-content"],
+[data-role="user"] [data-slot="message-content"] {
+  background-color: var(--accent) !important;
+  color: var(--accent-foreground) !important;
+  border: 1px solid var(--accent) !important;
+}
+
+/* User message text content */
+[data-message-role="user"] [data-slot="message-content"] p,
+[data-message-role="user"] [data-slot="message-content"] div,
+[data-message-role="user"] [data-slot="message-content"] span,
+[data-message-role="user"] [data-slot="message-content-text"],
+[data-message-role="user"] [data-slot="message-content-text"] * {
+  color: var(--accent-foreground) !important;
+}
+
+/* Assistant message bubbles - white background with black text */
+[data-message-role="assistant"] [data-slot="message-content"],
+[data-role="assistant"] [data-slot="message-content"] {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+  border: 1px solid var(--border) !important;
+}
+
+/* Assistant message text content */
+[data-message-role="assistant"] [data-slot="message-content"] p,
+[data-message-role="assistant"] [data-slot="message-content"] div,
+[data-message-role="assistant"] [data-slot="message-content"] span,
+[data-message-role="assistant"] [data-slot="message-content-text"],
+[data-message-role="assistant"] [data-slot="message-content-text"] * {
+  color: #000000 !important;
+}
+
+/* ============================================
+   Tambo Component Overrides
+   Force theme colors on Tambo components
+   ============================================ */
+
+/* Thread history items */
+[class*="thread"] button,
+[class*="thread"] [role="button"],
+[class*="history"] button,
+[class*="history"] [role="button"] {
+  transition: all 0.2s ease !important;
+}
+
+/* Hover state - cyan accent */
+[class*="thread"] button:hover,
+[class*="thread"] [role="button"]:hover,
+[class*="history"] button:hover,
+[class*="history"] [role="button"]:hover,
+.hover\:bg-backdrop:hover {
+  background-color: var(--accent) !important;
+  color: var(--accent-foreground) !important;
+}
+
+/* Selected/Active state - secondary background with primary text */
+[class*="thread"] button[aria-selected="true"],
+[class*="thread"] [data-state="active"],
+[class*="history"] button[aria-selected="true"],
+[class*="history"] [data-state="active"],
+.bg-muted {
+  background-color: var(--secondary) !important;
+  color: var(--primary) !important;
+}
+
+/* Message input */
+[class*="message"] textarea,
+[class*="message"] input,
+[class*="input"] textarea,
+[class*="input"] input {
+  background-color: var(--card) !important;
+  color: var(--foreground) !important;
+  border-color: var(--border) !important;
+}
+
+[class*="message"] textarea:focus,
+[class*="message"] input:focus,
+[class*="input"] textarea:focus,
+[class*="input"] input:focus {
+  border-color: var(--primary) !important;
+  outline-color: var(--primary) !important;
+  ring-color: var(--primary) !important;
+}
+
+/* Buttons and interactive elements */
+[class*="message"] button,
+[class*="input"] button,
+[class*="suggestion"] button {
+  background-color: var(--card) !important;
+  color: var(--foreground) !important;
+  border-color: var(--border) !important;
+  transition: all 0.2s ease !important;
+}
+
+[class*="message"] button:hover,
+[class*="input"] button:hover,
+[class*="suggestion"] button:hover {
+  background-color: var(--secondary) !important;
+  color: var(--primary) !important;
+}
+
+/* Primary action buttons */
+[class*="submit"] button,
+[class*="send"] button,
+button[type="submit"] {
+  background-color: var(--primary) !important;
+  color: var(--primary-foreground) !important;
+}
+
+[class*="submit"] button:hover,
+[class*="send"] button:hover,
+button[type="submit"]:hover {
+  background-color: var(--primary) !important;
+  opacity: 0.9 !important;
+}
+
+/* ============================================
+   Component Enhancements
+   ============================================ */
+
+/* Hover states use muted pink */
+button:hover:not(:disabled),
+[role="button"]:hover:not(:disabled) {
+  background-color: var(--secondary);
+  color: var(--primary);
+}
+
+/* Selected/Active states */
+[aria-selected="true"],
+[data-state="active"],
+.active {
+  background-color: var(--secondary);
+  color: var(--primary);
+}
+
+/* ============================================
+   Resizable Handle
+   ============================================ */
+
+.resize-handle {
+  width: 4px;
+  cursor: col-resize;
+  background-color: var(--border);
+  transition: background-color 0.2s ease;
+  position: relative;
+  z-index: 10;
+  flex-shrink: 0;
+}
+
+.resize-handle:hover,
+.resize-handle.resizing {
+  background-color: var(--accent);
+}
+
+.resize-handle::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -2px;
+  right: -2px;
+  bottom: 0;
+  cursor: col-resize;
+}
