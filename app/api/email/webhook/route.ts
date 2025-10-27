@@ -150,8 +150,5 @@ export async function POST(request: NextRequest) {
 }
 
 // Disable body parsing to allow raw body access for signature verification
-export const config = {
-  api: {
-    bodyParser: false,
-  },
-};
+export const dynamic = 'force-dynamic';
+export const runtime = 'nodejs';

@@ -178,29 +178,27 @@ export default function EmailSenderComponent({
   }
 
   return (
-    <div className="max-w-2xl mx-auto p-6 bg-white rounded-lg shadow-sm border">
+    <div className="max-w-2xl mx-auto p-4 md:p-6 bg-white rounded-lg shadow-sm border">
       {/* Header */}
-      <div className="mb-6">
+      <div className="mb-4 md:mb-6">
         <h2 className="text-xl font-semibold text-gray-900 mb-2">Send Email</h2>
         <p className="text-gray-600">Template: {template.name}</p>
       </div>
 
       {/* Progress indicator */}
-      <div className="mb-6">
-        <div className="flex items-center space-x-4">
+      <div className="mb-4 md:mb-6">
+        <div className="flex items-center space-x-2 md:space-x-4 overflow-x-auto pb-2">
           {['recipients', 'preview', 'sending', 'complete'].map((stepName, index) => (
             <div key={stepName} className="flex items-center">
-              <div className={`w-8 h-8 rounded-full flex items-center justify-center text-sm font-medium ${
-                step === stepName ? 'bg-blue-600 text-white' :
+              <div className={`w-6 h-6 md:w-8 md:h-8 rounded-full flex items-center justify-center text-xs md:text-sm font-medium flex-shrink-0 ${step === stepName ? 'bg-blue-600 text-white' :
                 ['recipients', 'preview', 'sending'].indexOf(step) > index ? 'bg-green-600 text-white' :
-                'bg-gray-200 text-gray-600'
-              }`}>
+                  'bg-gray-200 text-gray-600'
+                }`}>
                 {['recipients', 'preview', 'sending'].indexOf(step) > index ? '✓' : index + 1}
               </div>
               {index < 3 && (
-                <div className={`w-12 h-0.5 ${
-                  ['recipients', 'preview', 'sending'].indexOf(step) > index ? 'bg-green-600' : 'bg-gray-200'
-                }`} />
+                <div className={`w-8 md:w-12 h-0.5 flex-shrink-0 ${['recipients', 'preview', 'sending'].indexOf(step) > index ? 'bg-green-600' : 'bg-gray-200'
+                  }`} />
               )}
             </div>
           ))}
@@ -267,11 +265,11 @@ export default function EmailSenderComponent({
             />
           </div>
 
-          <div className="flex items-center justify-between pt-4">
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between pt-4 gap-3">
             <div className="text-sm text-gray-600">
               Total recipients: {getTotalRecipients()}
             </div>
-            <div className="flex space-x-3">
+            <div className="flex space-x-3 justify-end">
               {onCancel && (
                 <button
                   onClick={onCancel}
@@ -283,11 +281,10 @@ export default function EmailSenderComponent({
               <button
                 onClick={() => setStep('preview')}
                 disabled={!validateRecipients() || !subject.trim()}
-                className={`px-4 py-2 text-sm font-medium rounded-md transition-colors ${
-                  validateRecipients() && subject.trim()
-                    ? 'bg-blue-600 text-white hover:bg-blue-700'
-                    : 'bg-gray-300 text-gray-500 cursor-not-allowed'
-                }`}
+                className={`px-4 py-2 text-sm font-medium rounded-md transition-colors ${validateRecipients() && subject.trim()
+                  ? 'bg-blue-600 text-white hover:bg-blue-700'
+                  : 'bg-gray-300 text-gray-500 cursor-not-allowed'
+                  }`}
               >
                 Preview Email
               </button>
@@ -316,16 +313,16 @@ export default function EmailSenderComponent({
             <div dangerouslySetInnerHTML={{ __html: template.html }} />
           </div>
 
-          <div className="flex items-center justify-between pt-4">
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between pt-4 gap-3">
             <button
               onClick={() => setStep('recipients')}
-              className="px-4 py-2 text-sm font-medium text-gray-700 bg-gray-100 rounded-md hover:bg-gray-200 transition-colors"
+              className="px-4 py-2 text-sm font-medium text-gray-700 bg-gray-100 rounded-md hover:bg-gray-200 transition-colors order-2 sm:order-1"
             >
               Back
             </button>
             <button
               onClick={handleSendEmail}
-              className="px-6 py-2 text-sm font-medium bg-green-600 text-white rounded-md hover:bg-green-700 transition-colors"
+              className="px-6 py-2 text-sm font-medium bg-green-600 text-white rounded-md hover:bg-green-700 transition-colors order-1 sm:order-2"
             >
               Send Email
             </button>

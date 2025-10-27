@@ -159,3 +159,7 @@ firestore-debug.log
 # Capacitor
 ios/
 android/
+
+# IDE
+
+.kiro/

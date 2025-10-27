@@ -354,6 +354,63 @@ button:hover:not(:disabled),
 }
 
 /* ============================================
+   Canvas Editor Responsive Styles
+   ============================================ */
+
+/* Canvas editor container */
+.canvas-editor {
+  min-height: 0; /* Allow flex shrinking */
+  overflow: hidden;
+}
+
+/* Tablet adjustments for validation panel */
+@media (max-width: 1200px) {
+  .canvas-editor .w-80 {
+    width: 18rem;
+  }
+}
+
+@media (max-width: 1280px) {
+  .canvas-editor .w-80 {
+    width: 16rem;
+  }
+  
+  /* Reduce padding in tablet mode */
+  .canvas-editor .px-4 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .canvas-editor .w-80 {
+    width: 14rem;
+  }
+  
+  /* Stack validation panel below on mobile */
+  .canvas-editor .flex {
+    flex-direction: column;
+  }
+  
+  .canvas-editor .border-l {
+    border-left: none;
+    border-top: 1px solid var(--border);
+  }
+}
+
+/* Preview frame responsive adjustments */
+.canvas-editor .preview-frame {
+  box-sizing: border-box;
+  overflow: visible;
+}
+
+/* Ensure iframe doesn't cause horizontal scroll */
+.canvas-editor iframe {
+  box-sizing: border-box;
+  display: block;
+}
+
+/* ============================================
    Resizable Handle
    ============================================ */
 
